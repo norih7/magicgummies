@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 // Update the GraphQL endpoint to any instance of GraphQL that you like
 console.log(process.env);
-const GRAPHQL_URL = "http://localhost:3000/api/graphql";
+const GRAPHQL_URL = "https://magicgummies.vercel.app/api/graphql";
 
 const link = createHttpLink({
   fetch, // Switches between unfetch & node-fetch for client & server.
