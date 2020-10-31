@@ -3,6 +3,7 @@ import withApollo from "next-with-apollo";
 import fetch from "isomorphic-unfetch";
 
 // Update the GraphQL endpoint to any instance of GraphQL that you like
+console.log(process.env);
 const GRAPHQL_URL = "http://localhost:3000/api/graphql";
 
 const link = createHttpLink({
