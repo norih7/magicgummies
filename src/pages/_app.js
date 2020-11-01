@@ -2,7 +2,7 @@ import React from "react";
 import App from "next/app";
 import { ApolloProvider } from "@apollo/client";
 import { getDataFromTree } from "@apollo/client/react/ssr";
-import withData from "../util/Apollo";
+import withData from "util/Apollo";
 
 class MyApp extends App {
   render() {

@@ -1,10 +1,9 @@
-import React from "react";
+import * as React from "react";
 import Head from "next/head";
-import { useQuery } from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
+import Hoge from "components/atoms/Hoge";
 
-import gql from "graphql-tag";
-
-const JOBS_QUERY = gql`
+const query = gql`
   query {
     users {
       firstName
@@ -13,7 +12,7 @@ const JOBS_QUERY = gql`
 `;
 
 const Home = () => {
-  const { loading, data, error } = useQuery(JOBS_QUERY);
+  const { loading, data, error } = useQuery(query);
   if (loading) {
     return "loading";
   }
@@ -32,6 +31,7 @@ const Home = () => {
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Hoge />
       {list}
     </div>
   );
