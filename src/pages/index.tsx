@@ -14,7 +14,7 @@ const query = gql`
 const Home = () => {
   const { loading, data, error } = useQuery(query);
   if (loading) {
-    return "loading";
+    return <p>loading</p>;
   }
   if (error) {
     return <p>Error: {JSON.stringify(error)}</p>;
