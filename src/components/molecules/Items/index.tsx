@@ -1,42 +1,38 @@
 import * as React from "react";
 import * as styles from "./styles.module.css";
+import { useQuery, gql } from "@apollo/client";
 
 interface KeyValues {
   [key: string]: string;
 }
 
 type Props = {
-  allItem: {
-    edges: [];
-  };
-  filter: KeyValues;
+  chart: string;
   style?: {};
 };
 
 const Items = (props: Props) => {
-  const { allItem, filter, style } = props;
-  const result = [] as any;
-  Object.keys(filter).forEach((key: any) => {
-    const find = allItem.edges.filter((item: any) => {
-      return item.node[key].find((element: any) => {
-        return element == filter[key];
-      });
-    });
-    result[key] = find;
+  const { chart, style } = props;
+  const query = gql`
+    query($chart: String) {
+      items(map: "", chart: $chart) {
+        name
+        type
+        maps {
+          place
+          description
+        }
+      }
+    }
+  `;
+  const { loading, error, data } = useQuery(query, {
+    variables: { chart: "1-1" },
   });
 
-  let list: any[] = [];
-  Object.keys(result).forEach((key: any) => {
-    list = result[key].map((item: any) => {
-      const { node } = item;
-      const { name } = node;
-      return <li>{name}</li>;
-    });
-  });
+  if (loading) return <p>loading</p>;
+  if (error) return <p>error</p>;
 
-  if (list.length == 0) {
-    list.push(<li>なし</li>);
-  }
+  const list = data.items.map((item, i) => <li key={i}>{item.name}</li>);
 
   return (
     <div className={styles["items"]} style={style}>
