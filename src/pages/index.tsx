@@ -1,39 +1,34 @@
 import * as React from "react";
-import Head from "next/head";
-import { useQuery, gql } from "@apollo/client";
-import Hoge from "components/atoms/Hoge";
+import Layout from "components/templates/Layout";
+import CategoryList from "components/oraganisms/CategoryList";
+import Hoge from "./hoge";
 
-const query = gql`
-  query {
-    users {
-      firstName
-    }
-  }
-`;
+const Home = (props) => {
+  const marginBottom = {
+    marginBottom: "16px",
+  };
 
-const Home = () => {
-  const { loading, data, error } = useQuery(query);
-  if (loading) {
-    return <p>loading</p>;
-  }
-  if (error) {
-    return <p>Error: {JSON.stringify(error)}</p>;
-  }
-
-  const list = data.users.map((user, i) => {
-    const { firstName } = user;
-    return <li key={i}>{firstName}</li>;
-  });
+  const frontMatter = {
+    title: "トップページ",
+  };
 
   return (
-    <div>
-      <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout isHome={true} frontMatter={frontMatter}>
+      <CategoryList name="攻略チャート" style={marginBottom}>
+        {[{ to: "chart-1", title: "攻略チャート1 (オープニング〜)" }]}
+      </CategoryList>
+      <CategoryList name="特技、奥義" style={marginBottom} isFlex={true}>
+        {[
+          { to: "skill-kyle", title: "カイル" },
+          { to: "skill-loni", title: "ロニ" },
+          { to: "skill-judas", title: "ジューダス" },
+          { to: "skill-reala", title: "リアラ" },
+          { to: "skill-nanaly", title: "ナナリー" },
+          { to: "skill-harold", title: "ハロルド" },
+        ]}
+      </CategoryList>
       <Hoge />
-      {list}
-    </div>
+    </Layout>
   );
 };
 
