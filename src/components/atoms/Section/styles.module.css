@@ -1,0 +1,13 @@
+.section {
+    margin-bottom: 20px;
+    background: #eee;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.section header {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+}

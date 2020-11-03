@@ -1,0 +1,28 @@
+.table-list th {
+    background: rgb(230, 228, 219);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ccc;
+    text-align: left;
+    padding: 10px 30px;
+    font-weight: normal;
+}
+
+.table-list td {
+    background: #fff;
+    padding: 10px 30px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    box-shadow: 0 1px 0 #fff inset;
+    line-height: 150%;
+    color: #444;
+}
+
+.table-list td p {
+    margin: 0;
+}
+
+.ruby {
+    font-size: 0.8em;
+    font-weight: normal;
+}

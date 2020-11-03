@@ -1,0 +1,17 @@
+.tips {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.tips header {
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #bbb;
+}
+
+.content {
+    line-height: 1.8em;
+}

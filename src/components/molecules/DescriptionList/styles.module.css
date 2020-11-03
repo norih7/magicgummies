@@ -1,0 +1,8 @@
+.inline dt,
+.inline dd {
+    display: inline;
+}
+
+.inline dt {
+    margin-right: 4px;
+}

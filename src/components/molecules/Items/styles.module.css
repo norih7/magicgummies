@@ -1,0 +1,14 @@
+.items h3 {
+    margin: 12px 0 12px 0;
+}
+
+.items ul {
+    display: flex;
+}
+
+.items li {
+    padding: 4px 20px;
+    background: url(./images/arrow-right.png) no-repeat 0 50%;
+    background-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
