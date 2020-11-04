@@ -14,9 +14,14 @@
 }
 
 .header h1 {
-  padding-left: 30px;
   font-size: 1.2em;
-  background: url(./images/title-icon.svg) no-repeat 0 50%;
+}
+
+.header h1 span {
+  margin-right: 10px;
+  padding: 6px 6px 6px 30px;
+  border-bottom: 1px solid rgb(187, 210, 221);
+  background: url(./images/title-icon.svg) no-repeat 6px 50%;
 }
 
 .header a:link,

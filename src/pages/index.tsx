@@ -1,7 +1,6 @@
 import * as React from "react";
 import Layout from "components/templates/Layout";
 import CategoryList from "components/oraganisms/CategoryList";
-import Hoge from "./hoge";
 
 const Home = (props) => {
   const marginBottom = {
@@ -27,7 +26,6 @@ const Home = (props) => {
           { to: "skill-harold", title: "ハロルド" },
         ]}
       </CategoryList>
-      <Hoge />
     </Layout>
   );
 };

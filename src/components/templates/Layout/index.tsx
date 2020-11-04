@@ -52,7 +52,9 @@ const Layout = (props: Props) => {
       <header className={styles["header"]}>
         <div style={{ width: "920px", margin: "0 auto" }}>
           <h1>
-            <a href="">{SITE_NAME}</a>
+            <a href="">
+              <span>マジグミ</span>テイルズオブデスティニー2攻略
+            </a>
           </h1>
         </div>
       </header>
