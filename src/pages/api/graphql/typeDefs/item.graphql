@@ -1,0 +1,8 @@
+# import Map from "map.graphql"
+
+type Item {
+  name: String
+  type: String
+  chart: [String]
+  maps: [Map]
+}
