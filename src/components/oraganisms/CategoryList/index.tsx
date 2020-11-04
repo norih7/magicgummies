@@ -24,7 +24,7 @@ const CategoryList = (props: Props) => {
       </li>
     );
   });
-  const flex = isFlex ? { display: "flex", flexWrap: "wrap" } : {};
+  const flex = isFlex ? { display: "flex", "flex-wrap": "wrap" } : {};
   return (
     <section className={styles["category-list"]} style={style}>
       <h1>{name}</h1>
