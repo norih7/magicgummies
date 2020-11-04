@@ -2,6 +2,7 @@
 import { ApolloServer } from "apollo-server-micro";
 import { importSchema } from "graphql-import";
 import resolvers from "./resolvers";
+import path from "path";
 
 export const config = {
   api: {
@@ -10,7 +11,7 @@ export const config = {
 };
 
 const apolloServer = new ApolloServer({
-  typeDefs: importSchema("src/pages/api/graphql/typeDefs/schema.graphql"),
+  typeDefs: importSchema("graphql/typeDefs/schema.graphql"),
   resolvers,
 });
 
