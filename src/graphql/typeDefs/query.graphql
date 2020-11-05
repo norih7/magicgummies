@@ -1,5 +1,0 @@
-# import Item from "item.graphql"
-
-type Query {
-  items(type: String, map: String, chart: String): [Item!]!
-}
