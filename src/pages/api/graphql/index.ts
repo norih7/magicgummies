@@ -11,7 +11,7 @@ export const config = {
 };
 
 const apolloServer = new ApolloServer({
-  typeDefs: importSchema("graphql/typeDefs/schema.graphql"),
+  typeDefs: importSchema("./src/graphql/typeDefs/schema.graphql"),
   resolvers,
 });
 
