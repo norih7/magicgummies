@@ -51,4 +51,7 @@ module.exports = withMdxEnhanced({
     };
     return config;
   },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname,
+  },
 });
