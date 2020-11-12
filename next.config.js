@@ -39,7 +39,7 @@ module.exports = withMdxEnhanced({
     process: (mdxContent, frontMatter) => {},
     phase: "prebuild|loader|both",
   },
-  reExportDataFetching: false,
+  reExportDataFetching: true,
 })({
   webpack: (config) => {
     config.node = {

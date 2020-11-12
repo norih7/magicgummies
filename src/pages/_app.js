@@ -7,14 +7,12 @@ import "styles/globals.css";
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps, apollo } = this.props;
-    return (
-      <ApolloProvider client={apollo}>
-        <Component {...pageProps} />
-      </ApolloProvider>
-    );
+    const { Component, pageProps } = this.props;
+    return <Component {...pageProps} />;
   }
 }
 
 // Wraps all components in the tree with the data provider
-export default withData(MyApp, { getDataFromTree });
+// export default withData(MyApp, { getDataFromTree });
+
+export default MyApp;

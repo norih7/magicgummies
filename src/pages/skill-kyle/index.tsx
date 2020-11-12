@@ -1,5 +1,20 @@
 import * as React from "react";
 import Layout from "components/templates/Layout";
+import { gql } from "@apollo/client";
+import client from "util/ApolloClient";
+
+const query = gql`
+  query {
+    items(chart: "1-1") {
+      name
+      type
+      maps {
+        place
+        description
+      }
+    }
+  }
+`;
 
 const SkillsPage = (props: any) => {
   const frontMatter = {
@@ -13,5 +28,16 @@ const SkillsPage = (props: any) => {
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query,
+  });
+  return {
+    props: {
+      data: data,
+    },
+  };
+}
 
 export default SkillsPage;
