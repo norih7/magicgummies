@@ -14,7 +14,7 @@ type Props = {
   frontMatter: FrontMatter;
 };
 
-const SITE_NAME = "マジグミ テイルズオブデスティニー2攻略";
+const SITE_NAME = "マジグミ テイルズオブファンタジア攻略";
 
 const Layout = (props: Props) => {
   const { children, isHome, frontMatter = {} } = props;
@@ -53,7 +53,7 @@ const Layout = (props: Props) => {
         <div style={{ width: "920px", margin: "0 auto" }}>
           <h1>
             <a href="">
-              <span>マジグミ</span>テイルズオブデスティニー2攻略
+              <span>マジグミ</span>テイルズオブファンタジア攻略
             </a>
           </h1>
         </div>

@@ -49,7 +49,7 @@ export const getStaticProps = async ({ params }) => {
     query,
   });
 
-  console.log("!!!result", result);
+  console.log("!!!result", result.data.items);
 
   const source = fs.readFileSync(
     path.join(root, "src/markdown/", `${params.slug}`, `index.mdx`),

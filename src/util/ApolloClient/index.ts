@@ -7,20 +7,14 @@ const uri =
     ? "http://localhost:3000/api/graphql"
     : "https://magicgummies.vercel.app/api/graphql";
 
-console.log("!!!uri", uri);
-
 const link = createHttpLink({
   fetch, // Switches between unfetch & node-fetch for client & server.
   uri,
 });
 
-console.log("!!!15?");
-
 const client = new ApolloClient({
   link: link,
   cache: new InMemoryCache(),
 });
-
-console.log("!!!client", client);
 
 export default client;
